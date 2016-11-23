@@ -1,0 +1,15 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	logall = log --all --graph --decorate --oneline
+	br = branch
+[user]
+	name = Egor Suvorov
+[core]
+	editor = vim
+	excludefiles = 
+	excludesfiles = 
+	excludesfile = ~/.gitignore
+[push]
+	default = simple
