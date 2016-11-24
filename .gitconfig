@@ -8,8 +8,6 @@
 	name = Egor Suvorov
 [core]
 	editor = vim
-	excludefiles = 
-	excludesfiles = 
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
