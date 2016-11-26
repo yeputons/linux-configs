@@ -22,6 +22,6 @@ autocmd Filetype ocaml setlocal shiftwidth=2
 
 if executable("opam")
   let s:opam_path = systemlist("opam config var prefix")[0]
-  execute ("source " . s:opam_path . "/share/ocp-indent/vim/indent/ocaml.vim")
+  execute ("autocmd Filetype ocaml source " . s:opam_path . "/share/ocp-indent/vim/indent/ocaml.vim")
   unlet s:opam_path
 endif
