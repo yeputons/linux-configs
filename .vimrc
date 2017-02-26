@@ -1,10 +1,10 @@
-syntax on
 set ai
 set number
 set expandtab
 
 filetype on
 autocmd!
+syntax on
 
 nnoremap <F10> :bp!<CR>
 nnoremap <F11> :bn!<CR>
