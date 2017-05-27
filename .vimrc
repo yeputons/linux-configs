@@ -30,3 +30,4 @@ if executable("opam")
 endif
 
 execute pathogen#infect()
+autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
