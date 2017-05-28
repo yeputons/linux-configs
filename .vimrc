@@ -30,4 +30,6 @@ if executable("opam")
 endif
 
 execute pathogen#infect()
+autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
