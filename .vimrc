@@ -1,6 +1,6 @@
-# Download and install:
-# https://github.com/tpope/vim-pathogen
-# https://github.com/scrooloose/nerdtree
+" Download and install:
+" https://github.com/tpope/vim-pathogen
+" https://github.com/scrooloose/nerdtree
 set ai
 set number
 set expandtab
