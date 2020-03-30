@@ -1,6 +1,3 @@
-" Download and install:
-" https://github.com/tpope/vim-pathogen
-" https://github.com/scrooloose/nerdtree
 set ai
 set number
 set expandtab
@@ -28,8 +25,3 @@ if executable("opam")
   execute ("autocmd Filetype ocaml source " . s:opam_path . "/share/ocp-indent/vim/indent/ocaml.vim")
   unlet s:opam_path
 endif
-
-execute pathogen#infect()
-autocmd VimEnter * NERDTree | wincmd p
-autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
