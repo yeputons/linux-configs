@@ -18,10 +18,3 @@ set statusline=[%2n]\ %f%=line\ %m\ %l/%-8L\ col\ %c
 set laststatus=2
 
 set shiftwidth=4
-autocmd Filetype ocaml setlocal shiftwidth=2
-
-if executable("opam")
-  let s:opam_path = systemlist("opam config var prefix")[0]
-  execute ("autocmd Filetype ocaml source " . s:opam_path . "/share/ocp-indent/vim/indent/ocaml.vim")
-  unlet s:opam_path
-endif
