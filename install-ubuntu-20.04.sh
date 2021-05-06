@@ -1,5 +1,5 @@
 #!/bin/bash
-set -uexo pipefile
+set -uexo pipefail
 sudo apt update
 sudo apt upgrade
 sudo apt install \
