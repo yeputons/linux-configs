@@ -7,5 +7,5 @@ sudo apt install \
     valgrind cmake make cppcheck clang-format-10 clang-tidy-10 \
     libboost-all-dev \
     g++-10 \
-    clang-10 \
-    libc++-10-dev libc++abi-10-dev
+    clang-12 \
+    libc++-12-dev libc++abi-12-dev
