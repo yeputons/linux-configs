@@ -4,7 +4,7 @@ set -uexo pipefail
 echo Edit all TODO in this file and re-run && exit 1
 hostnamectl set-hostname TODO-HOSTNAME
 
-adduser --disabled-password yeputons
+adduser --disabled-password --gecos "" yeputons
 usermod -aG sudo yeputons
 [ -d /home/yeputons ]
 mkdir -p /home/yeputons/.ssh
@@ -14,11 +14,15 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDClMwxOgdxus1EktyV64J1fr4cZ2X09ZPXYesBV5tf
 EOF
 chown -R yeputons:yeputons /home/yeputons/.ssh
 
-cat << EOF > /etc/ssh/sshd_config.d/00-yeputons-config
+cat << EOF > /etc/ssh/sshd_config.d/00-yeputons.conf
 Port 220
 PermitRootLogin no
 PasswordAuthentication no
 EOF
-systemctl reload sshd
+systemctl reload ssh
 
-sudo -u yeputons -i 'ssh-keygen -t ed25519 -C "TODO@email" && cat ~/.ssh/id_ed25519.pub'
+passwd yeputons
+sudo -u yeputons -i ssh-keygen -t ed25519 -C "TODO@email"
+echo -e '\e[33;1mTEST NEW SSH SETTINGS FIRST!\e[0m'
+ssh-keygen -l -E md5 -f /etc/ssh/ssh_host_ecdsa_key
+ssh-keygen -l -E sha256 -f /etc/ssh/ssh_host_ecdsa_key
