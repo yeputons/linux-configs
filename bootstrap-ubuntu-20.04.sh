@@ -7,6 +7,7 @@ hostnamectl set-hostname TODO-HOSTNAME
 adduser --disabled-password --gecos "" yeputons
 usermod -aG sudo yeputons
 [ -d /home/yeputons ]
+chmod 750 /home/yeputons
 mkdir -p /home/yeputons/.ssh
 cat << EOF >>/home/yeputons/.ssh/authorized_keys
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDqSrxU1jizi+ywYfUHrOk1Ttd/ZEzVGZeZKXwVGpWBa2QsH6k/i6xpIi5Lw7xXmZd7FXiA7vjz95pAskXS3ojiDiomG6W9hC+ETToZNna32Sws77+fqv9CW7ocz/8Mvip3rFTLEfwHEJyEQQn++uYMRJGbx0cc6aVmSgo4/FfC/OTplO0MubjGucyIdRiB5OrjotTZVedl41famIkjljumy6/Wim8T1mTc/h+7qjlaa0t2jwRSHr3xOr/uqZT1zdx6u9qh5Zz3vCzoeewqXBfKWJ34DMzZnb8lbfha/3D9Yhqywtoi8iR7XwtSVokhUFIRfMGIcmg5kgBb7d0Afj79uJqYZDlx2YS7JAX4MAHvy1FENev73x2GSfU2LXWewcVVsM2cK7JM9ZfM9+QZ/MPtp1IZQ+eQtZ40NxRkku1O7tvP7MhDh+iUTcyPayHzqQqPB7cMbuxULQjDS6yO8w6IvVcYrFWMR2IEYxwdIGrzbw13yQTe24a8UMAVADsWrFIHsjuPggkxfrEjeroV3RukHMu3mDOwP6MgJP5HBKZ4QUIoTnF4tEOFr4tVZvU8fad0bzqyPZuiEhKlg0Lsiq2ai26cJAPFG7o16WbLpUmM6RwXVkTFixfreWUmdNx8MPhXibLhRrcDKZnAZEYS5PDM9ZDhmfO2z/VUED50psdlXQ== yeputons00
