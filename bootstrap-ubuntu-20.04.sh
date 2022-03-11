@@ -23,7 +23,7 @@ EOF
 systemctl reload ssh
 
 passwd yeputons
-sudo -u yeputons -i ssh-keygen -t ed25519 -C "TODO@email"
+sudo -u yeputons -i ssh-keygen -t ed25519 -C $(hostname)
 echo -e '\e[33;1mTEST NEW SSH SETTINGS FIRST!\e[0m'
 ssh-keygen -l -E md5 -f /etc/ssh/ssh_host_ecdsa_key
 ssh-keygen -l -E sha256 -f /etc/ssh/ssh_host_ecdsa_key
