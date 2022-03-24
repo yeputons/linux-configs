@@ -20,3 +20,4 @@ set statusline=[%2n]\ %f%=line\ %m\ %l/%-8L\ col\ %c
 set laststatus=2
 
 set shiftwidth=4
+colorscheme slate
