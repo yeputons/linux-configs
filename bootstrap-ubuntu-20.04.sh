@@ -1,6 +1,8 @@
 #!/bin/bash
 set -uexo pipefail
 
+for i in /etc/ssh/ssh_host_*.pub; do ssh-keygen -lf $i; done
+ 
 echo Edit all TODO in this file and re-run && exit 1
 hostnamectl set-hostname TODO-HOSTNAME
 
