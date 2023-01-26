@@ -4,6 +4,8 @@
 	st = status
 	logall = log --all --graph --decorate --oneline
 	br = branch
+	sw = switch
+	pushfwl = push --force-with-lease
 [user]
 	name = Egor Suvorov
 [core]
