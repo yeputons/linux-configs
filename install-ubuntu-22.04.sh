@@ -3,7 +3,7 @@ set -uexo pipefail
 sudo apt update
 sudo apt upgrade
 sudo apt install \
-    aptitude nano vim git tmux p7zip-full curl netcat-openbsd \
+    aptitude nano vim git tmux p7zip-full curl netcat-openbsd jq \
     valgrind cmake make cppcheck clang-format-14 clang-tidy-14 \
     libboost-all-dev \
     g++-12 \
