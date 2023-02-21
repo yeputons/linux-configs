@@ -5,12 +5,13 @@ set expandtab
 filetype on
 autocmd!
 syntax on
-
+set backspace=indent,eol,start
 nnoremap <F10> :bp!<CR>
 nnoremap <F11> :bn!<CR>
 nnoremap <C-L> :ls<CR>
 nnoremap <C-Y> dd<CR>
 nnoremap <C-N> :tabnew<CR>
+set 
 imap <F10> <ESC><F10>
 imap <F11> <ESC><F11>
 imap <C-L> <ESC><C-L>
